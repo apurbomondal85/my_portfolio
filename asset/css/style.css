@@ -7,8 +7,8 @@
 }
 
 :root {
-    --primary-color: #00a8e8;
-    --secondary-color: #007ea7;
+    --primary-color: #e91b1b;
+    --secondary-color: #ff6a00;
     --bg-light: #003459;
     --bg-dark: #00171f;
     --white-color: #ffffff;
@@ -64,8 +64,9 @@ input:focus{
 .btn-primary{
     padding: 10px 24px;
     background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    font-size: 14px;
-    font-weight: 400;
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 500;
     border-radius: 10px 0 10px 0;
     transition: all .5 ease-in-out;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
@@ -121,32 +122,14 @@ header .navbar-toggler:focus{
 /* ========= Header Section End ========== */
 
 /* ========= Hero Section Start ========== */
-
-.hero .hero-slide{
-    height: 650px;
-}
-
 .hero .hero-text{
-    height: 650px;
+    height: 600px;
 }
 
-.hero .hero-text>div{
-    height: 100%;
-}
-
-.hero .hero-text h4{
-    font-size: 14px;
+.hero .hero-text h6{
+    font-size: 16px;
     font-weight: 700;
     color: var(--primary-color);
-}
-
-.hero .hero-text h4::after{
-    content: '';
-    display: block;
-    width: 30px;
-    height: 2px;
-    background: linear-gradient(90deg, #04426d 0%, var(--secondary-color) 100%);
-    margin-top: 8px;
 }
 
 .hero .hero-text h1{
@@ -157,31 +140,112 @@ header .navbar-toggler:focus{
     margin: 16px 0;
 }
 
-.hero .hero-text p{
-    color: var(--light-color);
-    font-weight: 400;
-    font-size: 14px;
-    margin-bottom: 16px;
+.hero .hero-text h2{
+    font-size: 42px;
+    letter-spacing: .4px;
+    font-weight: 600;
+    color: var(--white-color);
+    margin: 16px 0;
 }
 
-.hero .hero-img img {
-    animation: img-moving 6s infinite ease-in-out;
+.hero .hero-text h2 .typed{
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    background-clip: text;
+    color: transparent;
 }
 
-@keyframes img-moving {
+.hero .hero-text .hero-btn{
+    margin-top: 32px;
+}
+
+.hero .hero-img{
+    height: 600px;
+}
+
+.hero .hero-img div{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    overflow: hidden;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+    animation: glowShadow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowShadow {
     0% {
-        transform: translateX(10px);
-    }
-    50% {
-        transform: translateX(-20px);
+        box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
     }
     100% {
-        transform: translateX(10px);
+        box-shadow: 0px 0px 60px rgba(255, 255, 255, 1);
     }
 }
 
-.hero .swiper-pagination-bullet{
-    background-color: var(--white-color);
+.hero .hero-img img{
+    /* height: 100%; */
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.laravel, .vue, .react {
+    position: absolute;
+    height: 80px;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* Laravel: Top ↔ Top + 20px */
+.laravel {
+    top: 10%;
+    left: 10%;
+    animation-name: moveTopBottom;
+}
+
+/* Vue: Bottom ↔ Bottom + 20px */
+.vue {
+    bottom: 5%;
+    left: 10%;
+    animation-name: moveLeftRight;
+}
+
+/* React: Left ↔ Left + 20px */
+.react {
+    bottom: 35%;
+    left: 50%;
+    animation-name: moveBottomUp;
+}
+
+/* Keyframes */
+@keyframes moveTopBottom {
+    0%, 100% {
+        top: 10%;
+    }
+    50% {
+        top: 12%;
+    }
+}
+
+@keyframes moveBottomUp {
+    0%, 100% {
+        bottom: 35%;
+    }
+    50% {
+        bottom: 32%;
+    }
+}
+
+@keyframes moveLeftRight {
+    0%, 100% {
+        left: 10%;
+    }
+    50% {
+        left: 12%;
+    }
 }
 
 /* ========= Hero Section End ========== */
