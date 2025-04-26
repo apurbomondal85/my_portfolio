@@ -47,13 +47,13 @@
                 About Us
               </a>
             </li>
-            <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link" href="#services">
                 Services
               </a>
-            </li>
+            </li> -->
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#fortfolio">
+              <a class="nav-link" href="#portfolio">
                 Portfolio
               </a>
             </li>
@@ -78,7 +78,7 @@
               <h1>Apurbo Mondal</h1>
               <h2>I'm a <span class="typed text-capitalize">
               </span></h2>
-              <a href="https://drive.google.com/file/d/11__XDj_QMRxvxx4NBu1SnxTQ5qDm2zeq/view?usp=drive_link" target="_blank"><button class="btn-primary hero-btn">Download CV</button></a>
+              <a href="https://drive.google.com/file/d/19QZOgwEsQOEYVCVAA1Xer5Fiq8ayNTrH/view?usp=sharing" target="_blank"><button class="btn-primary hero-btn">Download CV</button></a>
             </div>
           </div>
           <div class="col-lg-5">
@@ -170,16 +170,70 @@
     <section id="portfolio" class="portfolio">
       <div class="container">
         <h2 class="section-heading">Portfolio</h2>
-        
+        <div class="row mt-5 g-4">
+          <div class="col-lg-6">
+            <div class="portfolio-img position-relative">
+              <img src="asset/images/project1.png" alt="">
+              <div class="show-portfolio position-absolute">
+                  <div class="waves-block">
+                    <div class="waves wave-1"></div>
+                    <div class="waves wave-2"></div>
+                    <div class="waves wave-3"></div>
+                  </div>
+                  <a href="https://www.onlinemodibazar.com" target="_blank" class="view d-flex justify-content-center align-items-center" data-lity>View</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="portfolio-img position-relative">
+              <img src="asset/images/project2.png" alt="">
+              <div class="show-portfolio position-absolute">
+                  <div class="waves-block">
+                    <div class="waves wave-1"></div>
+                    <div class="waves wave-2"></div>
+                    <div class="waves wave-3"></div>
+                  </div>
+                  <a href="https://brainwarriorsglobal.com" target="_blank" class="view d-flex justify-content-center align-items-center" data-lity>View</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="portfolio-img position-relative">
+              <img src="asset/images/project3.png" alt="">
+              <div class="show-portfolio position-absolute">
+                  <div class="waves-block">
+                    <div class="waves wave-1"></div>
+                    <div class="waves wave-2"></div>
+                    <div class="waves wave-3"></div>
+                  </div>
+                  <a href="https://www.mbgfc.co.nz" target="_blank" class="view d-flex justify-content-center align-items-center" data-lity>View</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="portfolio-img position-relative">
+              <img src="asset/images/project4.png" alt="">
+              <div class="show-portfolio position-absolute">
+                  <div class="waves-block">
+                    <div class="waves wave-1"></div>
+                    <div class="waves wave-2"></div>
+                    <div class="waves wave-3"></div>
+                  </div>
+                  <a href="https://www.muktoshopbd.com" target="_blank" class="view d-flex justify-content-center align-items-center" data-lity>View</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- ========= Portfolio Section end ========= -->
 
+    <!-- ========= Contact Section Start ========= -->
     <section id="contact" class="section contact">
       <div class="container">
         <h2 class="section-heading text-start">Get In Touch</h2>
         <div class="contact-container">
-          <div class="contact-info">
+          <div class="contact-info mt-4">
             <div class="contact-item">
               <div class="contact-icon">
                 <i class="fas fa-map-marker-alt"></i>
@@ -196,7 +250,7 @@
               </div>
               <div class="contact-text">
                 <h3>Email</h3>
-                <a href="mailto:apurbo.simt.2020@gmail.com">apurbo.simt.2020@gmail.com</a>
+                <a href="mailto:apurbo.simt.2020@gmail.com" target="_blank">apurbo.simt.2020@gmail.com</a>
               </div>
             </div>
   
@@ -212,25 +266,25 @@
           </div>
   
           <div class="contact-form">
-            <form>
+            <form id="contactForm">
               <div class="form-group">
                 <label for="name">Your Name</label>
-                <input type="text" id="name" class="form-control" required>
+                <input type="text" id="name" name="name" class="form-control" required>
               </div>
   
               <div class="form-group">
                 <label for="email">Your Email</label>
-                <input type="email" id="email" class="form-control" required>
+                <input type="email" id="email" name="email" class="form-control" required>
               </div>
   
               <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" class="form-control" required>
+                <input type="text" id="subject" name="subject" class="form-control" required>
               </div>
   
               <div class="form-group">
                 <label for="message">Your Message</label>
-                <textarea id="message" class="form-control" required></textarea>
+                <textarea id="message" name="message" class="form-control" required></textarea>
               </div>
   
               <button type="submit" class="btn btn-primary">Send Message</button>
@@ -267,6 +321,13 @@
   <!-- typed js link  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js" integrity="sha512-hIlMpy2enepx9maXZF1gn0hsvPLerXoLHdb095CmRY5HG3bZfN7XPBZ14g+TUDH1aGgfLyPHmY9/zuU53smuMw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-</body>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+  <script>
+    (function(){
+      emailjs.init("pcOUX-6V6LlCCVYnR");
+    })(); 
+  </script>
+
+</body>
 </html>

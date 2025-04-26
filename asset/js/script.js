@@ -143,5 +143,16 @@ document.addEventListener('DOMContentLoaded', function () {
       centerX = canvas.width / 2;
       centerY = canvas.height / 2;
     });
+});
 
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  emailjs.sendForm('service_2bqr4fv', 'template_qocoylb', this)
+    .then(function() {
+      alert('Message sent successfully! ✅');
+      document.getElementById('contactForm').reset();
+    }, function(error) {
+      alert('Oops! Something went wrong. ❌\n' + JSON.stringify(error));
+    });
 });
